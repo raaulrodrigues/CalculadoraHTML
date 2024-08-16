@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade do mestre André</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tudo" align="center">
+        <h1>Calculadora do mestre André</h1>
+
+        <form id="calculadora">
+            <div class="tela">
+                <input id="display" placeholder="0" disabled>
+            </div>
+
+            <!--Div para poder mexer todas as teclas-->
+            <div id="teclas">
+                <br>
+                <br>
+                <br>
+                <br>
+                <!--Div dos números para personalizar tudo de uma vez, dividida em 3 divs para deixar separadinho no layout-->
+                <div class="teclas">
+                    <!--Div das operações para personalizar tudo de uma vez e dar uma organizada-->
+                    <div class="operacoes">
+                        <button type="button" onclick="definirOperacao('+')" class="botaoOpr"><b>+</b></button>
+                        <button type="button" onclick="definirOperacao('-')" class="botaoOpr"><b>-</b></button>
+                        <button type="button" onclick="definirOperacao('*')" class="botaoOpr"><b>*</b></button>
+                        <button type="button" onclick="definirOperacao('/')" class="botaoOpr"><b>/</b></button>
+                    </div>
+                    <br>
+                    <div class="numeros">
+                        <!--Esqueci de colocar o 0 antes, ent ele ficou meio deslocado no layout-->
+                        <div class="buttonNum0">
+                            <button type="button" onclick="adicionarNumero('0')" class="botaoNum00"><b>0</b></button>
+                        </div>
+                        <div>
+                            <button type="button" onclick="adicionarNumero('7')" class="botaoNum"><b>7</b></button>
+                            <button type="button" onclick="adicionarNumero('8')" class="botaoNum"><b>8</b></button>
+                            <button type="button" onclick="adicionarNumero('9')" class="botaoNum"><b>9</b></button>
+                        </div>
+
+                        <div>
+                            <button type="button" onclick="adicionarNumero('6')" class="botaoNum"><b>6</b></button>
+                            <button type="button" onclick="adicionarNumero('5')" class="botaoNum"><b>5</b></button>
+                            <button type="button" onclick="adicionarNumero('4')" class="botaoNum"><b>4</b></button>
+                        </div>
+
+                        <div>
+                            <button type="button" onclick="adicionarNumero('3')" class="botaoNum"><b>3</b></button>
+                            <button type="button" onclick="adicionarNumero('2')" class="botaoNum"><b>2</b></button>
+                            <button type="button" onclick="adicionarNumero('1')" class="botaoNum"><b>1</b></button>
+                        </div>
+                    </div>
+
+
+                    <div class="resultado">
+                        <button type="button" onclick="calcularResultado()" class="botaoResp"><b>=</b></button>
+                    </div>
+                    <!--Para não deixar o button resultado isolado, adicionei esse de limpar-->
+                    <div class="apagar">
+                        <button type="button" onclick="limpar()" class="botaoApag"><b>C</b></button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
